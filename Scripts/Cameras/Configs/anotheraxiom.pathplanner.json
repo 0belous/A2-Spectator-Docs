@@ -1,0 +1,113 @@
+{
+	"script": "anotheraxiom.pathplanner.luau",
+	"customData": {
+		"keyframes": [
+			{
+				"duration": 4,
+				"postProcessing": {
+					"depthOfFieldFocalDistance": 0
+				},
+				"transform": {
+					"rotation": {
+						"y": -0.052025515586137772,
+						"x": -0.34053730964660645,
+						"w": 0.54561001062393188,
+						"z": 0.76396167278289795
+					},
+					"fieldOfView": 90,
+					"position": {
+						"y": 8999.96875,
+						"x": -3264.0732421875,
+						"z": -3281.2294921875
+					}
+				}
+			},
+			{
+				"duration": 3,
+				"postProcessing": {
+					"depthOfFieldFocalDistance": 0
+				},
+				"transform": {
+					"rotation": {
+						"y": -0.086254976689815521,
+						"x": -0.36436557769775391,
+						"w": 0.52989667654037476,
+						"z": 0.76092529296875
+					},
+					"fieldOfView": 89.999984741210938,
+					"position": {
+						"y": 6317.39990234375,
+						"x": -2813.795654296875,
+						"z": -1732.1507568359375
+					}
+				}
+			},
+			{
+				"duration": 5,
+				"postProcessing": {
+					"depthOfFieldSensorWidth": 24.576000213623047,
+					"depthOfFieldFstop": 4,
+					"depthOfFieldFocalDistance": 0
+				},
+				"transform": {
+					"rotation": {
+						"y": 0.10266948491334915,
+						"x": -0.4700053334236145,
+						"w": 0.49197664856910706,
+						"z": 0.7256121039390564
+					},
+					"fieldOfView": 90.000038146972656,
+					"position": {
+						"y": -228.35888671875,
+						"x": -4025.828125,
+						"z": 5693.685546875
+					}
+				}
+			},
+			{
+				"duration": 6,
+				"postProcessing": {
+					"depthOfFieldFocalDistance": 0
+				},
+				"transform": {
+					"rotation": {
+						"y": -0.0048988764174282551,
+						"x": -0.091486737132072449,
+						"w": 0.16176170110702515,
+						"z": 0.98256772756576538
+					},
+					"fieldOfView": 94.999931335449219,
+					"position": {
+						"y": -70251.796875,
+						"x": 55876.94140625,
+						"z": 12749.1044921875
+					}
+				}
+			},
+			{
+				"duration": 10,
+				"postProcessing": {
+					"depthOfFieldFocalDistance": 0
+				},
+				"transform": {
+					"rotation": {
+						"y": -0.12451207637786865,
+						"x": 0.086386531591415405,
+						"w": 0.22788237035274506,
+						"z": 0.96182310581207275
+					},
+					"fieldOfView": 94.999931335449219,
+					"position": {
+						"y": -329921.3125,
+						"x": 663473.625,
+						"z": -176905.078125
+					}
+				}
+			}
+		],
+		"controlPointDistance01": 0.05299999937415123,
+		"animationDuration": 5,
+		"replayKeyframes": {},
+		"smoothing": 0.69700002670288086
+	}
+}

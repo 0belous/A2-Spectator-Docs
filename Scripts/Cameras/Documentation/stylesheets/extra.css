@@ -1,0 +1,15 @@
+:root {
+  --md-primary-fg-color: #5d5c7c;
+  --md-primary-fg-color--light: #ffffff;
+  --md-primary-fg-color--dark: #ff0000;
+  --md-primary-bg-color: hsla(0, 0%, 100%, 1);
+  --md-primary-bg-color--light: hsla(0, 0%, 100%, 0.7);
+}
+
+[data-md-color-scheme="slate"] {
+  --md-hue: 34;
+  --md-default-bg-color: #191819;
+  --md-code-bg-color: #211d20;
+  --md-typeset-color: #d0d0d0;
+  --md-code-fg-color: hsl(244, 50%, 80%);
+}

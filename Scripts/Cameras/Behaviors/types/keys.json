@@ -1,0 +1,20 @@
+{
+    "@roblox/global/Input.getKey": {
+        "documentation": "Returns true if this key is currently held down."
+    },
+    "@roblox/global/Input.getKeyDown": {
+        "documentation": "Returns true if this key was pressed this frame."
+    },
+    "@roblox/global/Input.getKeyUp": {
+        "documentation": "Returns true if this key was released this frame."
+    },
+    "@roblox/global/Input.getAnalog": {
+        "documentation": "Returns the value of the analog input for the given axis."
+    },
+    "@roblox/global/Input.getMouseDelta": {
+        "documentation": "Returns the position delta of the mouse since the last frame."
+    },
+    "@roblox/global/Input.Key": {
+        "documentation": "https://docs.unrealengine.com/5.1/en-US/API/Runtime/InputCore/EKeys/"
+    }
+}

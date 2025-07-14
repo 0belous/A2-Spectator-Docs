@@ -1,0 +1,113 @@
+{
+    "@roblox/globaltype/ReplayFrame": {
+        "documentation": "Represents a single frame of game data."
+    },
+    "@roblox/globaltype/ReplayFrame.balls": {
+        "documentation": "Array of all balls in the game"
+    },
+    "@roblox/globaltype/ReplayFrame.players": {
+        "documentation": "Array of all players in the game"
+    },
+    "@roblox/globaltype/ReplayFrame.spectators": {
+        "documentation": "Array of all spectators in the game"
+    },
+    "@roblox/globaltype/ReplayFrame.getPlayerById": {
+        "documentation": "Gets a player by id. This id is generated when the player joins the server"
+    },
+    "@roblox/globaltype/ReplayFrame.getPlayerByName": {
+        "documentation": "Gets a player by name"
+    },
+    "@roblox/globaltype/ReplayPlayer": {
+        "documentation": "This represents a player in game. The format is the same as player data in replay files."
+    },
+    "@roblox/globaltype/ReplayPlayer.playerId": {
+        "documentation": "Arbitrary id for the player, given by the server when they join"
+    },
+    "@roblox/globaltype/ReplayPlayer.playerName": {
+        "documentation": "The name of the player"
+    },
+    "@roblox/globaltype/ReplayPlayer.isLocalPlayer": {
+        "documentation": "True if this is the local player"
+    },
+    "@roblox/globaltype/ReplayPlayer.root": {
+        "documentation": "Transform of the player's rig"
+    },
+    "@roblox/globaltype/ReplayPlayer.head": {
+        "documentation": "Transform of the player's camera position"
+    },
+    "@roblox/globaltype/ReplayPlayer.leftHand": {
+        "documentation": "Transform of the player's left hand"
+    },
+    "@roblox/globaltype/ReplayPlayer.rightHand": {
+        "documentation": "Transform of the player's right hand"
+    },
+    "@roblox/globaltype/ReplayPlayer.velocity": {
+        "documentation": "Speed of the player's rig"
+    },
+    "@roblox/globaltype/ReplayPlayer.leftThrusterActive": {
+        "documentation": "True if using the left hand thruster"
+    },
+    "@roblox/globaltype/ReplayPlayer.rightThrusterActive": {
+        "documentation": "True if using the right hand thruster"
+    },
+    "@roblox/globaltype/ReplaySpectator": {
+        "documentation": "This represents a spectator player in game."
+    },
+    "@roblox/globaltype/ReplaySpectator.playerId": {
+        "documentation": "Arbitrary id for the player, given by the server when they join"
+    },
+    "@roblox/globaltype/ReplaySpectator.isLocalPlayer": {
+        "documentation": "True if this is the local player"
+    },
+    "@roblox/globaltype/ReplaySpectator.transform": {
+        "documentation": "Pos/rot of the spectator"
+    },
+    "@roblox/global/getGameData": {
+        "documentation": "Returns a ReplayFrame object representing the current game state"
+    },
+    "@roblox/global/getAllGameData": {
+        "documentation": "Returns a list of ReplayFrames containing the current game state and the current game state of any active replays"
+    },
+    "@roblox/globaltype/Replay.isPlaying": {
+        "documentation": "Should the time of this replay file automatically advance?"
+    },
+    "@roblox/globaltype/Replay.getStartTime": {
+        "documentation": "The timestamp of the first frame in the replay"
+    },
+    "@roblox/globaltype/Replay.getEndTime": {
+        "documentation": "The timestamp of the last frame in the replay"
+    },
+    "@roblox/globaltype/Replay.getDurationSeconds": {
+        "documentation": "The duration of the replay in seconds"
+    },
+    "@roblox/globaltype/Replay.getCurrentFrame": {
+        "documentation": "Gets the ReplayFrame at the current playback time. Setting interpolate to false will only return frames that are in the original data"
+    },
+    "@roblox/global/Replay.load": {
+        "documentation": "Loads a replay from the given fileName inside the standard replays folder. Returns a Replay object."
+    },
+    "@roblox/global/Replay.loadSubsampled": {
+        "documentation": "Loads a replay with the given subsampling hz - DEBUG: This will be removed in the future"
+    },
+    "@roblox/global/Replay.unloadAll": {
+        "documentation": "Unloads all replay files from memory."
+    },
+    "@roblox/global/Replay.listAll": {
+        "documentation": "Returns a list of all replay files in the standard replays folder."
+    },
+    "@roblox/global/Replay.listLoaded": {
+        "documentation": "Returns a list of all replay files that have been loaded."
+    },
+    "@roblox/global/Replay.getByIndex": {
+        "documentation": "Returns the replay object at the given index."
+    },
+    "@roblox/global/Replay.unloadByIndex": {
+        "documentation": "Unloads the replay object at the given index."
+    },
+    "@roblox/global/Replay.startRecording": {
+        "documentation": "Starts recording a replay file with an automatic file name. Returns false if the user has not allowed camera scripts to write replay files."
+    },
+    "@roblox/global/Replay.stopRecording": {
+        "documentation": "Stops recording the current replay file. Returns false if the user has not allowed camera scripts to write replay files."
+    }
+}

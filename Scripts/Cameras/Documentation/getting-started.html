@@ -1,0 +1,783 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://spectator.a2.another-axiom.com/getting-started.html">
+      
+      
+        <link rel="prev" href="index.html">
+      
+      
+        <link rel="next" href="default-cameras.html">
+      
+      
+      <link rel="icon" href="assets/logo_128.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.25">
+    
+    
+      
+        <title>Getting Started - A2 Spectator Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.6543a935.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+        <script src="https://unpkg.com/iframe-worker/shim"></script>
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/extra.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#getting-started" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="A2 Spectator Docs" class="md-header__button md-logo" aria-label="A2 Spectator Docs" data-md-component="logo">
+      
+  <img src="assets/logo_1024.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            A2 Spectator Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Getting Started
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="A2 Spectator Docs" class="md-nav__button md-logo" aria-label="A2 Spectator Docs" data-md-component="logo">
+      
+  <img src="assets/logo_1024.png" alt="logo">
+
+    </a>
+    A2 Spectator Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    A2 Spectator Documentation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="getting-started.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-default-cameras" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using the Default Cameras
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#editor-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Editor Setup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-your-first-camera" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating Your First Camera
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating Your First Camera">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-camera-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a Camera Script
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activating-your-camera" class="md-nav__link">
+    <span class="md-ellipsis">
+      Activating Your Camera
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-some-functionality" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding Some Functionality
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-a-gui" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding a GUI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-camera-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Camera Config
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      What's next?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="default-cameras.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Default Cameras
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="configuration.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="gui.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GUI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="post-processing.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Post Processing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="replays.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Replays
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="world-drawing.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    World Drawing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="getting-started">Getting Started</h1>
+<h2 id="installation">Installation</h2>
+<div class="admonition warning inline end">
+<p class="admonition-title">You must run the game at least once to generate the necessary files.</p>
+</div>
+<p>To run the spectator client, you must have the desktop build of A2 installed in the Oculus app.
+Select the 3 dots next to the app in your library, and click "Start in Desktop Mode":</p>
+<p><img alt="start in desktop mode" src="assets/screenshots/oculus_desktop_mode.png" /></p>
+<p>The GUI for spectator client is hidden by default, but can be toggled with <code>F1</code>. Once activated, a menu bar will appear at the top with options to open various panels:</p>
+<p><img alt="menu bar" src="assets/screenshots/menu_bar.png" /></p>
+<h2 id="using-the-default-cameras">Using the Default Cameras</h2>
+<p>Upon entering spectator, the default freecam (<code>anotheraxiom.freecam</code>) is activated. You can switch to other cameras using the Cameras panel (under <code>Spectator &gt; Cameras</code> or press <code>F2</code>), or by pressing their associated keybind. You can also use this panel to adjust the keybind for any camera.</p>
+<h2 id="editor-setup">Editor Setup</h2>
+<p>While any text editor can be used to edit camera scripts, we recommend using <a href="https://code.visualstudio.com/">VSCode</a> with the following extensions:</p>
+<ul>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=JohnnyMorganz.luau-lsp">luau-lsp</a> for language support.</li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=JohnnyMorganz.stylua">StyLua</a> for code formatting.</li>
+</ul>
+<h2 id="creating-your-first-camera">Creating Your First Camera</h2>
+<p>All cameras in A2 are powered by <a href="https://luau-lang.org/">Luau</a> scripts. In this section you will create a new script and add it to the game.</p>
+<h3 id="creating-a-camera-script">Creating a Camera Script</h3>
+<p>To start, open the user camera folder in your documents directory (<code>C:\Users\[USERNAME]\Documents\Another-Axiom\A2\Cameras\Behaviors</code>) in your editor. If the folder does not exist, make sure you run A2 at least once.</p>
+<div class="admonition note inline end">
+<p class="admonition-title">Note</p>
+<p>Following this naming convention is not necessary, but it helps to prevent name collisions with other camera scripts</p>
+</div>
+<p>Create a new file named <code>myname.mycamera.luau</code> and add the following contents:</p>
+<div class="language-lua highlight"><span class="filename">myname.mycamera.luau</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, A2!&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Next, in A2, open up the Camera Logs panel under <code>Spectator &gt; Camera Logs</code> or press the <code>F4</code> key to open it. You should see your message printed there:</p>
+<div class="language-toml highlight"><span class="filename">Camera Logs</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">[myname.mycamera.luau]</span><span class="err">:</span><span class="w"> </span><span class="n">Hello</span><span class="err">,</span><span class="w"> </span><span class="n">A2</span><span class="err">!</span>
+</span></code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">Experiment</p>
+<p>Try changing the text to something different! The script will automatically reload when you save.</p>
+</div>
+<h3 id="activating-your-camera">Activating Your Camera</h3>
+<p>To activate your camera, bring up the Cameras panel again (<code>F2</code>), and select <code>Activate</code> next to <code>myname.mycamera.luau</code>. If you would like, you can add a keybind here to quickly switch to your camera.</p>
+<h3 id="adding-some-functionality">Adding Some Functionality</h3>
+<p>As you can see, this camera doesn't do anything: the camera is stuck at the origin. Lets add some code to our script to make the camera move in a circle:</p>
+<div class="admonition example inline end">
+<p class="admonition-title">Experiment</p>
+<p>Try changing this function to get different behaviors. What other shapes can you create?</p>
+</div>
+<div class="language-lua highlight"><span class="filename">myname.mycamera.luau</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">local</span> <span class="n">t</span> <span class="o">=</span> <span class="mi">0</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="kr">function</span> <span class="nf">tick</span><span class="p">(</span><span class="n">dt</span><span class="p">:</span> <span class="n">number</span><span class="p">)</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>  <span class="n">t</span> <span class="o">+=</span> <span class="n">dt</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>  <span class="kd">local</span> <span class="n">target</span> <span class="o">=</span> <span class="n">Vec3</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">8000</span><span class="p">,</span> <span class="o">-</span><span class="mi">25000</span><span class="p">)</span> <span class="c1">-- a nice spot in the station</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>  <span class="kd">local</span> <span class="n">offset</span> <span class="o">=</span> <span class="n">Vec3</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="nb">math.sin</span><span class="p">(</span><span class="n">t</span><span class="p">),</span> <span class="nb">math.cos</span><span class="p">(</span><span class="n">t</span><span class="p">),</span> <span class="mi">0</span><span class="p">)</span> <span class="o">*</span> <span class="mi">200</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>  <span class="n">camera</span><span class="p">.</span><span class="n">position</span> <span class="o">=</span> <span class="n">target</span> <span class="o">+</span> <span class="n">offset</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>  <span class="n">camera</span><span class="p">:</span><span class="n">lookAt</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">Vec3</span><span class="p">.</span><span class="n">upVector</span><span class="p">)</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="kr">end</span>
+</span></code></pre></div>
+<p>After saving the file (and activating our camera if it is not already active), you should see the camera moving in a circle around the arena.</p>
+<h3 id="adding-a-gui">Adding a GUI</h3>
+<p>As you can see, our script has several parameters that influence the path that it takes. Wouldn't it be nice if there was a way for the end user to adjust these without having to modify the source code?</p>
+<p>A2 exposes much of the functionality of <a href="https://github.com/ocornut/imgui">ImGui</a> to camera scripts. These methods are available under the <code>Gui</code> namespace, but can only be used inside of the <code>onGui</code> function.</p>
+<p>First, lets pull some of our parameters outside of <code>tick</code>:</p>
+<div class="language-lua highlight"><span class="filename">myname.mycamera.luau</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="hll"><span class="kd">local</span> <span class="n">speed</span> <span class="o">=</span> <span class="mi">1</span>
+</span></span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="hll"><span class="kd">local</span> <span class="n">radius</span> <span class="o">=</span> <span class="mi">200</span>
+</span></span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="kd">local</span> <span class="n">t</span> <span class="o">=</span> <span class="mi">0</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="kr">function</span> <span class="nf">tick</span><span class="p">(</span><span class="n">dt</span><span class="p">:</span> <span class="n">number</span><span class="p">)</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="hll">  <span class="n">t</span> <span class="o">+=</span> <span class="n">dt</span> <span class="o">*</span> <span class="n">speed</span>
+</span></span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>  <span class="kd">local</span> <span class="n">target</span> <span class="o">=</span> <span class="n">Vec3</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">8000</span><span class="p">,</span> <span class="o">-</span><span class="mi">25000</span><span class="p">)</span> <span class="c1">-- a nice spot in the station</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="hll">  <span class="kd">local</span> <span class="n">offset</span> <span class="o">=</span> <span class="n">Vec3</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="nb">math.sin</span><span class="p">(</span><span class="n">t</span><span class="p">),</span> <span class="nb">math.cos</span><span class="p">(</span><span class="n">t</span><span class="p">),</span> <span class="mi">0</span><span class="p">)</span> <span class="o">*</span> <span class="n">radius</span>
+</span></span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>  <span class="n">camera</span><span class="p">.</span><span class="n">position</span> <span class="o">=</span> <span class="n">target</span> <span class="o">+</span> <span class="n">offset</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>  <span class="n">camera</span><span class="p">:</span><span class="n">lookAt</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">Vec3</span><span class="p">.</span><span class="n">upVector</span><span class="p">)</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="kr">end</span>
+</span></code></pre></div>
+<p>Now we can add a gui method to our script:</p>
+<div class="admonition example inline end">
+<p class="admonition-title">Experiment</p>
+<p>Try adding an element to adjust the target. Is there a GUI element that works with <code>Vec3</code>'s?</p>
+</div>
+<div class="language-lua highlight"><span class="filename">myname.mycamera.luau</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1">-- ...</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="kr">function</span> <span class="nf">onGui</span><span class="p">()</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>  <span class="n">Gui</span><span class="p">.</span><span class="n">text</span><span class="p">(</span><span class="s2">&quot;My camera settings&quot;</span><span class="p">)</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>  <span class="n">speed</span> <span class="o">=</span> <span class="n">Gui</span><span class="p">.</span><span class="n">sliderFloat</span><span class="p">(</span><span class="s2">&quot;Speed&quot;</span><span class="p">,</span> <span class="n">speed</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>  <span class="kr">if</span> <span class="n">Gui</span><span class="p">.</span><span class="n">button</span><span class="p">(</span><span class="s2">&quot;-1&quot;</span><span class="p">)</span> <span class="kr">then</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>    <span class="n">speed</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>  <span class="kr">end</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>  <span class="n">Gui</span><span class="p">.</span><span class="n">sameLine</span><span class="p">()</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>  <span class="kr">if</span> <span class="n">Gui</span><span class="p">.</span><span class="n">button</span><span class="p">(</span><span class="s2">&quot;0&quot;</span><span class="p">)</span> <span class="kr">then</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>    <span class="n">speed</span> <span class="o">=</span> <span class="mi">0</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>  <span class="kr">end</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>  <span class="n">Gui</span><span class="p">.</span><span class="n">sameLine</span><span class="p">()</span>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>  <span class="kr">if</span> <span class="n">Gui</span><span class="p">.</span><span class="n">button</span><span class="p">(</span><span class="s2">&quot;1&quot;</span><span class="p">)</span> <span class="kr">then</span>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>    <span class="n">speed</span> <span class="o">=</span> <span class="mi">1</span>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>  <span class="kr">end</span>
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>  <span class="n">radius</span> <span class="o">=</span> <span class="n">Gui</span><span class="p">.</span><span class="n">sliderFloat</span><span class="p">(</span><span class="s2">&quot;Radius&quot;</span><span class="p">,</span> <span class="n">radius</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2000</span><span class="p">)</span>
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="kr">end</span>
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a><span class="c1">-- ...</span>
+</span></code></pre></div>
+<p>To bring up this menu, bring up the Current Camera panel (<code>Spectator &gt; Current Camera</code> or <code>F3</code>). This displays the GUI for whatever camera is currently active:</p>
+<p><img alt="custom gui" src="assets/screenshots/custom_gui.png" /></p>
+<h3 id="the-camera-config">The Camera Config</h3>
+<p>Now that the user can tweak the parameters of the camera, they might want to save these values for the next time they launch A2. Luckily, we can use the builtin <code>config</code> object to persist state.
+When the script loads, the saved configuration is loaded into the <code>config</code> object.</p>
+<p>To get us started, we can use the config object to store our <code>speed</code> and <code>radius</code> settings:</p>
+<div class="admonition example inline end">
+<p class="admonition-title">Experiment</p>
+<p>If you've updated your script to adjust the target position, store the position in the same way.</p>
+</div>
+<div class="language-lua highlight"><span class="filename">myname.mycamera.luau</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="hll"><span class="n">config</span><span class="p">.</span><span class="n">speed</span> <span class="o">=</span> <span class="n">config</span><span class="p">.</span><span class="n">speed</span> <span class="ow">or</span> <span class="mi">1</span> <span class="c1">-- use a default value if config.speed is not set</span>
+</span></span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="hll"><span class="n">config</span><span class="p">.</span><span class="n">radius</span> <span class="o">=</span> <span class="n">config</span><span class="p">.</span><span class="n">radius</span> <span class="ow">or</span> <span class="mi">200</span>
+</span></span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="kd">local</span> <span class="n">t</span> <span class="o">=</span> <span class="mi">0</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="kr">function</span> <span class="nf">onGui</span><span class="p">()</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>  <span class="n">Gui</span><span class="p">.</span><span class="n">text</span><span class="p">(</span><span class="s2">&quot;My camera settings&quot;</span><span class="p">)</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="hll">  <span class="n">config</span><span class="p">.</span><span class="n">speed</span> <span class="o">=</span> <span class="n">Gui</span><span class="p">.</span><span class="n">sliderFloat</span><span class="p">(</span><span class="s2">&quot;Speed&quot;</span><span class="p">,</span> <span class="n">config</span><span class="p">.</span><span class="n">speed</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+</span></span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>  <span class="kr">if</span> <span class="n">Gui</span><span class="p">.</span><span class="n">button</span><span class="p">(</span><span class="s2">&quot;-1&quot;</span><span class="p">)</span> <span class="kr">then</span>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="hll">    <span class="n">config</span><span class="p">.</span><span class="n">speed</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+</span></span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>  <span class="kr">end</span>
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>  <span class="n">Gui</span><span class="p">.</span><span class="n">sameLine</span><span class="p">()</span>
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>  <span class="kr">if</span> <span class="n">Gui</span><span class="p">.</span><span class="n">button</span><span class="p">(</span><span class="s2">&quot;0&quot;</span><span class="p">)</span> <span class="kr">then</span>
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="hll">    <span class="n">config</span><span class="p">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>  <span class="kr">end</span>
+</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>  <span class="n">Gui</span><span class="p">.</span><span class="n">sameLine</span><span class="p">()</span>
+</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>  <span class="kr">if</span> <span class="n">Gui</span><span class="p">.</span><span class="n">button</span><span class="p">(</span><span class="s2">&quot;1&quot;</span><span class="p">)</span> <span class="kr">then</span>
+</span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="hll">    <span class="n">config</span><span class="p">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">1</span>
+</span></span><span id="__span-5-20"><a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>  <span class="kr">end</span>
+</span><span id="__span-5-21"><a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a>
+</span><span id="__span-5-22"><a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a><span class="hll">  <span class="n">config</span><span class="p">.</span><span class="n">radius</span> <span class="o">=</span> <span class="n">Gui</span><span class="p">.</span><span class="n">sliderFloat</span><span class="p">(</span><span class="s2">&quot;Radius&quot;</span><span class="p">,</span> <span class="n">config</span><span class="p">.</span><span class="n">radius</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2000</span><span class="p">)</span>
+</span></span><span id="__span-5-23"><a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a><span class="kr">end</span>
+</span><span id="__span-5-24"><a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a>
+</span><span id="__span-5-25"><a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a><span class="kr">function</span> <span class="nf">tick</span><span class="p">(</span><span class="n">dt</span><span class="p">:</span> <span class="n">number</span><span class="p">)</span>
+</span><span id="__span-5-26"><a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a><span class="hll">  <span class="n">t</span> <span class="o">+=</span> <span class="n">dt</span> <span class="o">*</span> <span class="n">config</span><span class="p">.</span><span class="n">speed</span>
+</span></span><span id="__span-5-27"><a id="__codelineno-5-27" name="__codelineno-5-27" href="#__codelineno-5-27"></a>
+</span><span id="__span-5-28"><a id="__codelineno-5-28" name="__codelineno-5-28" href="#__codelineno-5-28"></a>  <span class="kd">local</span> <span class="n">target</span> <span class="o">=</span> <span class="n">Vec3</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">8000</span><span class="p">,</span> <span class="o">-</span><span class="mi">25000</span><span class="p">)</span> <span class="c1">-- a nice spot in the station</span>
+</span><span id="__span-5-29"><a id="__codelineno-5-29" name="__codelineno-5-29" href="#__codelineno-5-29"></a><span class="hll">  <span class="kd">local</span> <span class="n">offset</span> <span class="o">=</span> <span class="n">Vec3</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="nb">math.sin</span><span class="p">(</span><span class="n">t</span><span class="p">),</span> <span class="nb">math.cos</span><span class="p">(</span><span class="n">t</span><span class="p">),</span> <span class="mi">0</span><span class="p">)</span> <span class="o">*</span> <span class="n">config</span><span class="p">.</span><span class="n">radius</span>
+</span></span><span id="__span-5-30"><a id="__codelineno-5-30" name="__codelineno-5-30" href="#__codelineno-5-30"></a>
+</span><span id="__span-5-31"><a id="__codelineno-5-31" name="__codelineno-5-31" href="#__codelineno-5-31"></a>  <span class="n">camera</span><span class="p">.</span><span class="n">position</span> <span class="o">=</span> <span class="n">target</span> <span class="o">+</span> <span class="n">offset</span>
+</span><span id="__span-5-32"><a id="__codelineno-5-32" name="__codelineno-5-32" href="#__codelineno-5-32"></a>  <span class="n">camera</span><span class="p">:</span><span class="n">lookAt</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">Vec3</span><span class="p">.</span><span class="n">upVector</span><span class="p">)</span>
+</span><span id="__span-5-33"><a id="__codelineno-5-33" name="__codelineno-5-33" href="#__codelineno-5-33"></a><span class="kr">end</span>
+</span></code></pre></div>
+<p>By itself, this doesn't provide us with any persistence. In order to persist the state of <code>config</code>,  we need to call <code>saveConfig()</code>.
+Additionally, we can save a copy the config (using <code>table.clone()</code>) to allow the user to reset their config to its initial state:</p>
+<div class="admonition example inline end">
+<p class="admonition-title">Experiment</p>
+<p>In addition to <code>Save</code> and <code>Undo</code>, there are hundreds of other icons available. Try using them in some other GUI labels!</p>
+</div>
+<div class="language-lua highlight"><span class="filename">myname.mycamera.luau</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">config</span><span class="p">.</span><span class="n">speed</span> <span class="o">=</span> <span class="n">config</span><span class="p">.</span><span class="n">speed</span> <span class="ow">or</span> <span class="mi">1</span> <span class="c1">-- use a default value if config.speed is not set</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">config</span><span class="p">.</span><span class="n">radius</span> <span class="o">=</span> <span class="n">config</span><span class="p">.</span><span class="n">radius</span> <span class="ow">or</span> <span class="mi">200</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="hll"><span class="n">originalConfig</span> <span class="o">=</span> <span class="n">table</span><span class="p">.</span><span class="n">clone</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
+</span></span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="kd">local</span> <span class="n">t</span> <span class="o">=</span> <span class="mi">0</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="kr">function</span> <span class="nf">onGui</span><span class="p">()</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>  <span class="c1">-- ...</span>
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="hll">  <span class="kr">if</span> <span class="n">Gui</span><span class="p">.</span><span class="n">button</span><span class="p">(</span><span class="n">Icon</span><span class="p">.</span><span class="n">Save</span> <span class="o">..</span> <span class="s2">&quot; Save Config&quot;</span><span class="p">)</span> <span class="kr">then</span>
+</span></span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="hll">    <span class="n">saveConfig</span><span class="p">()</span>
+</span></span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="hll">    <span class="n">originalConfig</span> <span class="o">=</span> <span class="n">table</span><span class="p">.</span><span class="n">clone</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
+</span></span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="hll">  <span class="kr">end</span>
+</span></span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="hll">
+</span></span><span id="__span-6-17"><a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a><span class="hll">  <span class="kr">if</span> <span class="n">Gui</span><span class="p">.</span><span class="n">button</span><span class="p">(</span><span class="n">Icon</span><span class="p">.</span><span class="n">Undo</span> <span class="o">..</span> <span class="s2">&quot; Reset Config&quot;</span><span class="p">)</span> <span class="kr">then</span>
+</span></span><span id="__span-6-18"><a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a><span class="hll">    <span class="n">config</span> <span class="o">=</span> <span class="n">table</span><span class="p">.</span><span class="n">clone</span><span class="p">(</span><span class="n">originalConfig</span><span class="p">)</span>
+</span></span><span id="__span-6-19"><a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a><span class="hll">  <span class="kr">end</span>
+</span></span><span id="__span-6-20"><a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a><span class="kr">end</span>
+</span><span id="__span-6-21"><a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a>
+</span><span id="__span-6-22"><a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a><span class="c1">-- ...</span>
+</span></code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">How is this config saved to disk?</p>
+<p>All of the configuration for a camera (what script to use, keybind, and configuration) is stored in a json file. The config data is stored under the <code>customdata</code> key.
+These camera files are located in the <code>Configs</code> folder next to the <code>Behaviors</code> folder, and are used to determine what cameras to spawn, and what scripts to use.
+However, when a script does not have any existing cameras associated with it, a default camera json (e.g. <code>myname.mycamera.json</code>) is generated.
+Multiple cameras can reference the same script while having different keybinds and configurations.</p>
+<p>Try making a copy of <code>myname.mycamera.json</code> and edit its custom data to change the config speed. Another camera will appear in the Cameras panel with the new speed.</p>
+</div>
+<h3 id="whats-next">What's next?</h3>
+<ul>
+<li>Examine the official cameras. Their files are located in the games install location (By default, <code>C:\Program Files\Oculus\Software\Software\another-axiom-a2-cqxlff\A2\Content\Scripts\Cameras\Behaviors\</code>)</li>
+<li>For a reference of all functions and types available, see the <code>*.d.lua</code> type files located under the built in behaviors path. The <code>*.json</code> files are there to provide documentation during autocomplete, and are derived from the types files.</li>
+<li>Check out the <a href="replays.html">replay functionality</a></li>
+<li>Check out the recommended <a href="https://roblox.github.io/lua-style-guide/">Luau style guide</a></li>
+</ul>
+
+
+
+
+
+
+
+  
+    
+  
+  
+    
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 19, 2024</span>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Created">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 18, 2024</span>
+  </span>
+
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["content.action.edit", "navigation.instant", "content.code.copy", "navigation.sections", "navigation.expand", "navigation.path", "navigation.indexes", "toc.follow", "toc.integrate"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.081f42fc.min.js"></script>
+      
+    
+  </body>
+</html>

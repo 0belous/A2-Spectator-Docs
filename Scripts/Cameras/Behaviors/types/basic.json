@@ -1,0 +1,245 @@
+{
+    "@roblox/global/debug": {
+        "documentation": "Log a message to the console using the debug log level."
+    },
+    "@roblox/global/print": {
+        "documentation": "Log a message to the console using the default log level."
+    },
+    "@roblox/global/warn": {
+        "documentation": "Log a message to the console using the warning log level."
+    },
+    "@roblox/global/issue": {
+        "documentation": "Log a message to the console using the error log level. Unlike `error()` This won't raise an error."
+    },
+    "@roblox/globaltype/Vec3.dot": {
+        "documentation": "Dot product of two vectors"
+    },
+    "@roblox/globaltype/Vec3.cross": {
+        "documentation": "Cross product of two vectors"
+    },
+    "@roblox/globaltype/Vec3.projectOnTo": {
+        "documentation": "Project self onto rhr"
+    },
+    "@roblox/globaltype/Vec3.length": {
+        "documentation": "Magnitude of the vector"
+    },
+    "@roblox/globaltype/Vec3.squaredLength": {
+        "documentation": "Squared magnitude of the vector"
+    },
+    "@roblox/globaltype/Vec3.normalize": {
+        "documentation": "Creates a unit vector of length 1"
+    },
+    "@roblox/globaltype/Vec3.getSafeNormal": {
+        "documentation": "Returns a unit length copy of the vector"
+    },
+    "@roblox/globaltype/Vec3.getMax": {
+        "documentation": "Get the maximum value of the vector's components."
+    },
+    "@roblox/globaltype/Vec3.getAbsMax": {
+        "documentation": "Get the maximum absolute value of the vector's components."
+    },
+    "@roblox/globaltype/Vec3.getMin": {
+        "documentation": "Get the minimum value of the vector's components."
+    },
+    "@roblox/globaltype/Vec3.getAbsMin": {
+        "documentation": "Get the minimum absolute value of the vector's components."
+    },
+    "@roblox/globaltype/Vec3.getAbs": {
+        "documentation": "Get a copy of this vector with absolute value of each component."
+    },
+    "@roblox/globaltype/Vec3.isNearlyZero": {
+        "documentation": "Checks whether vector is near to zero within a reasonable tolerance."
+    },
+    "@roblox/globaltype/Vec3.isZero": {
+        "documentation": "Checks whether all components of the vector are exactly zero."
+    },
+    "@roblox/globaltype/Vec3.isNormalized": {
+        "documentation": "Checks whether vector is normalized."
+    },
+    "@roblox/globaltype/Vec3.getSignVector": {
+        "documentation": "Get a copy of the vector as sign only. Each component is set to +1 or -1, with the sign of zero treated as +1."
+    },
+    "@roblox/globaltype/Vec3.rotateAngleAxis": {
+        "documentation": "Rotates around Axis (assumes Axis.Size() == 1)."
+    },
+    "@roblox/globaltype/Vec3.rotateAngleAxisRad": {
+        "documentation": "Rotates around Axis (assumes Axis.Size() == 1)."
+    },
+    "@roblox/globaltype/Vec3.containsNan": {
+        "documentation": "Utility to check if there are any non-finite values (NaN or Inf) in this vector."
+    },
+    "@roblox/globaltype/Vec3.lerp": {
+        "documentation": "Linearly interpolate between self and other by 0 <= t <= 1"
+    },
+    "@roblox/globaltype/Vec3.distance": {
+        "documentation": "Distance between self and other"
+    },
+    "@roblox/global/Vec3.new": {
+        "documentation": "Construct a new vector (x,y,z)"
+    },
+    "@roblox/global/Vec3.dot": {
+        "documentation": "Calculate the dot product of two vectors."
+    },
+    "@roblox/global/Vec3.cross": {
+        "documentation": "Calculate the cross product of two vectors."
+    },
+    "@roblox/global/Vec3.lerp": {
+        "documentation": "Linearly interpolate between a and b by 0 <= t <= 1"
+    },
+    "@roblox/global/Vec3.upVector": {
+        "documentation": "(0,0,1)"
+    },
+    "@roblox/global/Vec3.downVector": {
+        "documentation": "(0,0,-1)"
+    },
+    "@roblox/global/Vec3.leftVector": {
+        "documentation": "(0,-1,0)"
+    },
+    "@roblox/global/Vec3.rightVector": {
+        "documentation": "(0,1,0)"
+    },
+    "@roblox/global/Vec3.forwardVector": {
+        "documentation": "(1,0,0)"
+    },
+    "@roblox/global/Vec3.backwardVector": {
+        "documentation": "(-1,0,0)"
+    },
+    "@roblox/global/Vec3.zeroVector": {
+        "documentation": "(0,0,0)"
+    },
+    "@roblox/global/Vec3.oneVector": {
+        "documentation": "(1,1,1)"
+    },
+    "@roblox/globaltype/Vec2.dot": {
+        "documentation": "Dot product of two vectors"
+    },
+    "@roblox/globaltype/Vec2.length": {
+        "documentation": "Magnitude of the vector"
+    },
+    "@roblox/globaltype/Vec2.squaredLength": {
+        "documentation": "Squared magnitude of the vector"
+    },
+    "@roblox/globaltype/Vec2.normalize": {
+        "documentation": "Creates a unit vector of length 1"
+    },
+    "@roblox/globaltype/Vec2.getSafeNormal": {
+        "documentation": "Returns a unit length copy of the vector"
+    },
+    "@roblox/globaltype/Vec2.getMax": {
+        "documentation": "Get the maximum value of the vector's components."
+    },
+    "@roblox/globaltype/Vec2.getAbsMax": {
+        "documentation": "Get the maximum absolute value of the vector's components."
+    },
+    "@roblox/globaltype/Vec2.getMin": {
+        "documentation": "Get the minimum value of the vector's components."
+    },
+    "@roblox/globaltype/Vec2.getAbsMin": {
+        "documentation": "Get the minimum absolute value of the vector's components."
+    },
+    "@roblox/globaltype/Vec2.getAbs": {
+        "documentation": "Get a copy of this vector with absolute value of each component."
+    },
+    "@roblox/globaltype/Vec2.isNearlyZero": {
+        "documentation": "Checks whether vector is near to zero within a reasonable tolerance."
+    },
+    "@roblox/globaltype/Vec2.isZero": {
+        "documentation": "Checks whether all components of the vector are exactly zero."
+    },
+    "@roblox/globaltype/Vec2.isNormalized": {
+        "documentation": "Checks whether vector is normalized."
+    },
+    "@roblox/globaltype/Vec2.getSignVector": {
+        "documentation": "Get a copy of the vector as sign only. Each component is set to +1 or -1, with the sign of zero treated as +1."
+    },
+    "@roblox/globaltype/Vec2.containsNan": {
+        "documentation": "Utility to check if there are any non-finite values (NaN or Inf) in this vector."
+    },
+    "@roblox/globaltype/Vec2.lerp": {
+        "documentation": "Linearly interpolate between self and other by 0 <= t <= 1"
+    },
+    "@roblox/globaltype/Vec2.distance": {
+        "documentation": "Distance between self and other"
+    },
+    "@roblox/global/Vec2.zeroVector": {
+        "documentation": "Zero vector (0,0)"
+    },
+    "@roblox/global/Vec2.oneVector": {
+        "documentation": "One vector (1,1)"
+    },
+    "@roblox/global/Vec2.unitDiagonal": {
+        "documentation": "Normalized one vector (sqrt(2),sqrt(2))"
+    },
+    "@roblox/global/Vec2.unitX": {
+        "documentation": "Unit X vector (1,0)"
+    },
+    "@roblox/global/Vec2.unitY": {
+        "documentation": "Unit Y vector (0,1)"
+    },
+    "@roblox/global/Vec2.dot": {
+        "documentation": "Calculate the dot product of two vectors."
+    },
+    "@roblox/global/Vec2.lerp": {
+        "documentation": "Linearly interpolate between a and b by 0 <= t <= 1"
+    },
+    "@roblox/global/Vec2.new": {
+        "documentation": "Construct a new vector (x,y)"
+    },
+    "@roblox/globaltype/Quat.euler": {
+        "documentation": "Convert a Quaternion into floating-point Euler angles (in degrees)."
+    },
+    "@roblox/globaltype/Quat.getForwardVector": {
+        "documentation": "Get the forward direction (X axis) after it has been rotated by this Quaternion."
+    },
+    "@roblox/globaltype/Quat.getRightVector": {
+        "documentation": "Get the right direction (Y axis) after it has been rotated by this Quaternion."
+    },
+    "@roblox/globaltype/Quat.getUpVector": {
+        "documentation": "Get the up direction (Z axis) after it has been rotated by this Quaternion."
+    },
+    "@roblox/globaltype/Quat.rotateVector": {
+        "documentation": "Rotate a vector by this quaternion."
+    },
+    "@roblox/globaltype/Quat.normalize": {
+        "documentation": "Normalize this quaternion if it is large enough. If it is too small, returns an identity quaternion."
+    },
+    "@roblox/global/Quat": {
+        "documentation": "Quaternions"
+    },
+    "@roblox/global/Quat.declare Quat": {
+        "documentation": "Quaternions"
+    },
+    "@roblox/global/Quat.new": {
+        "documentation": "Construct a new quaternion (x,y,z,w)"
+    },
+    "@roblox/global/Quat.fromEuler": {
+        "documentation": "Convert a (roll, pitch, yaw) to a quaternion"
+    },
+    "@roblox/global/Quat.fromDirection": {
+        "documentation": "Create a quaternion from a foward direction, with global up as the reference up"
+    },
+    "@roblox/global/Quat.fromXZ": {
+        "documentation": "Create a quaternion from foward and up vectors"
+    },
+    "@roblox/global/Quat.findBetweenVectors": {
+        "documentation": "Find the smallest rotation between two vectors"
+    },
+    "@roblox/global/Quat.slerp": {
+        "documentation": "Spherical linear interpolation between a and b by 0 <= t <= 1"
+    },
+    "@roblox/global/Quat.identity": {
+        "documentation": "The identity quaternion, e.g. no rotation (0,0,0,1)"
+    },
+    "@roblox/globaltype/Transform": {
+        "documentation": "A 3D transformation"
+    },
+    "@roblox/global/Transform.new": {
+        "documentation": "Create a new transform from a given position, rotation, and/or scale"
+    },
+    "@roblox/global/config": {
+        "documentation": "The config table from the configuation .json file"
+    },
+    "@roblox/global/config.declare config": {
+        "documentation": "The config table from the configuation .json file"
+    }
+}

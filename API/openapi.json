@@ -1,0 +1,987 @@
+{
+	"openapi": "3.1.1",
+	"info": {
+		"title": "Orion Drift Spectator API",
+		"version": "1.0.0",
+		"termsOfService": "https://www.anotheraxiom.com/terms"
+	},
+	"servers": [
+		{
+			"url": "http://127.0.0.1:5420",
+			"description": "Local server hosted by the Orion Drift spectator client"
+		}
+	],
+	"paths": {
+		"/state": {
+			"get": {
+				"summary": "Get game state",
+				"operationId": "getState",
+				"tags": [
+					"State"
+				],
+				"responses": {
+					"200": {
+						"description": "Successful response",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/ReplayFrame"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/state/all_frames": {
+			"get": {
+				"summary": "Get all frames state",
+				"operationId": "getAllFramesState",
+				"description": "Get all frames state. This includes the current live gameplay as well as all replays that are currently loaded.",
+				"tags": [
+					"State"
+				],
+				"responses": {
+					"200": {
+						"description": "Successful response",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AllFramesState"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/state/local_player": {
+			"get": {
+				"summary": "Get local player position",
+				"operationId": "getLocalPlayer",
+				"description": "The position of the local player. This is a spectator when running from the spectator client.",
+				"tags": [
+					"State"
+				],
+				"responses": {
+					"200": {
+						"description": "Successful response",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"properties": {
+										"position": {
+											"$ref": "#/components/schemas/Vector"
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/state/gamemodes": {
+			"get": {
+				"summary": "List all gamemodes",
+				"operationId": "listGamemodes",
+				"description": "Lists all loaded gamemodes, including their slot IDs and positions.",
+				"tags": [
+					"Gamemodes"
+				],
+				"responses": {
+					"200": {
+						"description": "Successful response",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/GamemodesInfoResponse"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/state/gamemodes/{slot_id}": {
+			"get": {
+				"summary": "Get a specific gamemode by slot ID",
+				"operationId": "getGamemode",
+				"description": "Returns more detailed information about a specific gamemode, including the players and teams. To get a valid slot ID, use the /state/gamemodes endpoint.",
+				"tags": [
+					"Gamemodes"
+				],
+				"parameters": [
+					{
+						"name": "slot_id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "string"
+						},
+						"description": "The ID of the gamemode slot"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Successful response",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/SpectatorGamemodeData"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/replays/list": {
+			"get": {
+				"summary": "List available replays",
+				"operationId": "listReplays",
+				"tags": [
+					"Replays"
+				],
+				"responses": {
+					"200": {
+						"description": "Successful response",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/ReplayListResponse"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/replays/download": {
+			"get": {
+				"summary": "Download a replay",
+				"operationId": "downloadReplay",
+				"tags": [
+					"Replays"
+				],
+				"parameters": [
+					{
+						"name": "file_name",
+						"in": "query",
+						"required": true,
+						"schema": {
+							"type": "string"
+						},
+						"description": "The name of the replay file to download. Only include the file name relative to the default replay directory."
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Successful response",
+						"content": {
+							"application/octet-stream": {
+								"schema": {
+									"type": "string",
+									"format": "binary"
+								}
+							}
+						}
+					},
+					"404": {
+						"description": "Replay not found",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/ErrorResponseJson"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/cameras": {
+			"get": {
+				"summary": "List installed cameras",
+				"operationId": "listCameras",
+				"tags": [
+					"Cameras"
+				],
+				"responses": {
+					"200": {
+						"description": "Successful response",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/CameraListResponse"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/cameras/{camera_id}/config": {
+			"get": {
+				"summary": "Get camera config",
+				"operationId": "getCameraConfig",
+				"tags": [
+					"Cameras"
+				],
+				"parameters": [
+					{
+						"name": "camera_id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "string"
+						},
+						"description": "The ID of the camera to retrieve the config for. i.e. 'anotheraxiom.freecam'"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Successful response",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"description": "Arbitrary JSON object representing the camera config. The structure depends on the camera implementation.",
+									"additionalProperties": true
+								}
+							}
+						}
+					},
+					"404": {
+						"description": "Camera not found",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/ErrorResponseJson"
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	"components": {
+		"schemas": {
+			"ReplayFrame": {
+				"type": "object",
+				"properties": {
+					"interpolated": {
+						"type": "boolean",
+						"default": false
+					},
+					"replayVersion": {
+						"type": "number",
+						"format": "uint8"
+					},
+					"time": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"gameVersion": {
+						"type": "number",
+						"format": "uint32"
+					},
+					"players": {
+						"type": "array",
+						"items": {
+							"$ref": "#/components/schemas/ReplayPlayer"
+						}
+					},
+					"spectators": {
+						"type": "array",
+						"items": {
+							"$ref": "#/components/schemas/ReplaySpectator"
+						}
+					},
+					"balls": {
+						"type": "array",
+						"items": {
+							"$ref": "#/components/schemas/ReplayBall"
+						}
+					},
+					"worldTime": {
+						"type": "number",
+						"format": "float",
+						"default": 0
+					}
+				},
+				"required": [
+					"interpolated",
+					"replayVersion",
+					"time",
+					"gameVersion",
+					"players",
+					"spectators",
+					"balls",
+					"worldTime"
+				]
+			},
+			"ReplayPlayer": {
+				"type": "object",
+				"properties": {
+					"playerId": {
+						"type": "number",
+						"format": "int32",
+						"description": "Unique ID for the player. This is unique within a server, but does not identify this player across servers."
+					},
+					"playerName": {
+						"type": "string"
+					},
+					"bIsLocalPlayer": {
+						"type": "boolean",
+						"description": "Is this player our own player?"
+					},
+					"root": {
+						"$ref": "#/components/schemas/ReplayTransform"
+					},
+					"head": {
+						"$ref": "#/components/schemas/ReplayTransform"
+					},
+					"leftHand": {
+						"$ref": "#/components/schemas/ReplayTransform"
+					},
+					"rightHand": {
+						"$ref": "#/components/schemas/ReplayTransform"
+					},
+					"velocity": {
+						"$ref": "#/components/schemas/Vector"
+					},
+					"bLeftThrusterActive": {
+						"type": "boolean"
+					},
+					"bRightThrusterActive": {
+						"type": "boolean"
+					},
+					"bIsBraking": {
+						"type": "boolean"
+					},
+					"bIsBigBoosting": {
+						"type": "boolean"
+					},
+					"teamIndex": {
+						"type": "number",
+						"format": "int32",
+						"default": -1
+					},
+					"playerColor": {
+						"$ref": "#/components/schemas/ReplayTeamColor"
+					},
+					"bLeftClimbing": {
+						"type": "boolean"
+					},
+					"bRightClimbing": {
+						"type": "boolean"
+					},
+					"bLeftColliding": {
+						"type": "boolean"
+					},
+					"bRightColliding": {
+						"type": "boolean"
+					},
+					"bLeftSliding": {
+						"type": "boolean"
+					},
+					"bRightSliding": {
+						"type": "boolean"
+					},
+					"leftHandPoseBits": {
+						"type": "number",
+						"format": "uint8"
+					},
+					"rightHandPoseBits": {
+						"type": "number",
+						"format": "uint8"
+					},
+					"localClimbOffset": {
+						"$ref": "#/components/schemas/Vector"
+					},
+					"grabbedByAnotherPlayerCounter": {
+						"type": "number",
+						"format": "int32"
+					},
+					"cosmeticMeshMetadataName": {
+						"type": "string"
+					},
+					"cosmeticMaterialMetadata": {
+						"$ref": "#/components/schemas/ReplayCosmeticMaterialMetadata"
+					},
+					"equippedItems": {
+						"type": "array",
+						"items": {
+							"type": "string"
+						}
+					},
+					"roleColor": {
+						"$ref": "#/components/schemas/Color"
+					},
+					"partyId": {
+						"type": "number",
+						"format": "int32",
+						"default": 0
+					}
+				},
+				"required": [
+					"playerId",
+					"playerName",
+					"bIsLocalPlayer",
+					"root",
+					"head",
+					"leftHand",
+					"rightHand",
+					"velocity",
+					"bLeftThrusterActive",
+					"bRightThrusterActive",
+					"bIsBraking",
+					"bIsBigBoosting",
+					"teamIndex",
+					"playerColor",
+					"bLeftClimbing",
+					"bRightClimbing",
+					"bLeftColliding",
+					"bRightColliding",
+					"bLeftSliding",
+					"bRightSliding",
+					"leftHandPoseBits",
+					"rightHandPoseBits",
+					"localClimbOffset",
+					"grabbedByAnotherPlayerCounter",
+					"cosmeticMeshMetadataName",
+					"cosmeticMaterialMetadata",
+					"equippedItems",
+					"roleColor",
+					"partyId"
+				]
+			},
+			"ReplayTransform": {
+				"type": "object",
+				"properties": {
+					"position": {
+						"$ref": "#/components/schemas/Vector"
+					},
+					"rotation": {
+						"$ref": "#/components/schemas/Quat"
+					}
+				},
+				"required": [
+					"position",
+					"rotation"
+				]
+			},
+			"Vector": {
+				"type": "object",
+				"properties": {
+					"x": {
+						"type": "number",
+						"format": "double",
+						"description": "X component"
+					},
+					"y": {
+						"type": "number",
+						"format": "double",
+						"description": "Y component"
+					},
+					"z": {
+						"type": "number",
+						"format": "double",
+						"description": "Z component"
+					}
+				},
+				"required": [
+					"x",
+					"y",
+					"z"
+				]
+			},
+			"Quat": {
+				"type": "object",
+				"properties": {
+					"x": {
+						"type": "number",
+						"format": "double",
+						"description": "X component"
+					},
+					"y": {
+						"type": "number",
+						"format": "double",
+						"description": "Y component"
+					},
+					"z": {
+						"type": "number",
+						"format": "double",
+						"description": "Z component"
+					},
+					"w": {
+						"type": "number",
+						"format": "double",
+						"description": "W component"
+					}
+				},
+				"required": [
+					"x",
+					"y",
+					"z",
+					"w"
+				]
+			},
+			"ReplayTeamColor": {
+				"type": "object",
+				"properties": {
+					"primary": {
+						"$ref": "#/components/schemas/Color",
+						"default": {
+							"R": 97,
+							"G": 105,
+							"B": 127,
+							"A": 255
+						}
+					},
+					"secondary": {
+						"$ref": "#/components/schemas/Color",
+						"default": {
+							"R": 5,
+							"G": 5,
+							"B": 6,
+							"A": 255
+						}
+					},
+					"teamLogoIndex": {
+						"type": "number",
+						"format": "int32",
+						"default": 0
+					},
+					"teamName": {
+						"type": "string",
+						"default": "NoPreference"
+					},
+					"teamRowId": {
+						"type": "string",
+						"default": "None"
+					}
+				},
+				"required": [
+					"primary",
+					"secondary",
+					"teamLogoIndex",
+					"teamName",
+					"teamRowId"
+				]
+			},
+			"Color": {
+				"type": "object",
+				"properties": {
+					"r": {
+						"type": "integer",
+						"format": "uint8",
+						"description": "Red component (0-255)"
+					},
+					"g": {
+						"type": "integer",
+						"format": "uint8",
+						"description": "Green component (0-255)"
+					},
+					"b": {
+						"type": "integer",
+						"format": "uint8",
+						"description": "Blue component (0-255)"
+					},
+					"a": {
+						"type": "integer",
+						"format": "uint8",
+						"description": "Alpha component (0-255)"
+					}
+				}
+			},
+			"ReplayCosmeticMaterialMetadata": {
+				"type": "object",
+				"properties": {
+					"baseColor": {
+						"$ref": "#/components/schemas/LinearColor"
+					},
+					"maskColor1": {
+						"$ref": "#/components/schemas/LinearColor"
+					},
+					"maskColor2": {
+						"$ref": "#/components/schemas/LinearColor"
+					},
+					"maskColor3": {
+						"$ref": "#/components/schemas/LinearColor"
+					},
+					"maskAtlasUVOffsets": {
+						"$ref": "#/components/schemas/Vector2D"
+					},
+					"logoAtlasUVOffsets": {
+						"$ref": "#/components/schemas/Vector2D"
+					}
+				},
+				"required": [
+					"baseColor",
+					"maskColor1",
+					"maskColor2",
+					"maskColor3",
+					"maskAtlasUVOffsets",
+					"logoAtlasUVOffsets"
+				]
+			},
+			"LinearColor": {
+				"type": "object",
+				"properties": {
+					"r": {
+						"type": "number",
+						"format": "float",
+						"description": "Red component (0-1)"
+					},
+					"g": {
+						"type": "number",
+						"format": "float",
+						"description": "Green component (0-1)"
+					},
+					"b": {
+						"type": "number",
+						"format": "float",
+						"description": "Blue component (0-1)"
+					},
+					"a": {
+						"type": "number",
+						"format": "float",
+						"description": "Alpha component (0-1)"
+					}
+				}
+			},
+			"Vector2D": {
+				"type": "object",
+				"properties": {
+					"x": {
+						"type": "number",
+						"format": "double",
+						"description": "X component"
+					},
+					"y": {
+						"type": "number",
+						"format": "double",
+						"description": "Y component"
+					}
+				},
+				"required": [
+					"x",
+					"y"
+				]
+			},
+			"ReplaySpectator": {
+				"type": "object",
+				"properties": {
+					"playerId": {
+						"type": "number",
+						"format": "int32"
+					},
+					"playerName": {
+						"type": "string"
+					},
+					"bIsLocalPlayer": {
+						"type": "boolean"
+					},
+					"ping": {
+						"type": "number",
+						"format": "uint8"
+					},
+					"transform": {
+						"$ref": "#/components/schemas/ReplayTransform"
+					}
+				},
+				"required": [
+					"playerId",
+					"playerName",
+					"bIsLocalPlayer",
+					"ping",
+					"transform"
+				]
+			},
+			"ReplayBall": {
+				"type": "object",
+				"properties": {
+					"transform": {
+						"$ref": "#/components/schemas/ReplayTransform"
+					},
+					"velocity": {
+						"$ref": "#/components/schemas/Vector"
+					},
+					"arena": {
+						"type": "number",
+						"format": "int32",
+						"default": -1
+					},
+					"type": {
+						"type": "number",
+						"format": "uint8",
+						"default": 0
+					},
+					"size": {
+						"type": "number",
+						"format": "float",
+						"default": 1
+					},
+					"index": {
+						"type": "number",
+						"format": "int32",
+						"default": -1
+					},
+					"color1": {
+						"$ref": "#/components/schemas/Color"
+					},
+					"color2": {
+						"$ref": "#/components/schemas/Color"
+					}
+				},
+				"required": [
+					"transform",
+					"velocity",
+					"arena",
+					"type",
+					"size",
+					"index",
+					"color1",
+					"color2"
+				]
+			},
+			"AllFramesState": {
+				"type": "object",
+				"properties": {
+					"frames": {
+						"type": "array",
+						"items": {
+							"$ref": "#/components/schemas/ReplayFrame"
+						}
+					}
+				},
+				"required": [
+					"frames"
+				]
+			},
+			"GamemodesInfoResponse": {
+				"type": "object",
+				"properties": {
+					"gamemodes": {
+						"type": "array",
+						"items": {
+							"$ref": "#/components/schemas/SpectatorGamemodeSlotInfo"
+						}
+					}
+				},
+				"required": [
+					"gamemodes"
+				]
+			},
+			"SpectatorGamemodeSlotInfo": {
+				"type": "object",
+				"properties": {
+					"slotId": {
+						"type": "string"
+					},
+					"position": {
+						"$ref": "#/components/schemas/Vector"
+					},
+					"rotation": {
+						"$ref": "#/components/schemas/Quat"
+					},
+					"features": {
+						"type": "array",
+						"items": {
+							"type": "string"
+						}
+					}
+				},
+				"required": [
+					"slotId",
+					"position",
+					"rotation",
+					"features"
+				]
+			},
+			"SpectatorGamemodeData": {
+				"type": "object",
+				"properties": {
+					"slotId": {
+						"type": "string"
+					},
+					"timeSeconds": {
+						"type": "number",
+						"format": "float",
+						"default": 0
+					},
+					"secondaryTimeSeconds": {
+						"type": "number",
+						"format": "float",
+						"default": 0
+					},
+					"isGameRunning": {
+						"type": "boolean",
+						"default": false
+					},
+					"totalRounds": {
+						"type": "number",
+						"format": "int32",
+						"default": 0
+					},
+					"useBestOf": {
+						"type": "boolean",
+						"default": false
+					},
+					"teams": {
+						"type": "array",
+						"items": {
+							"$ref": "#/components/schemas/SpectatorGamemodeTeamData"
+						}
+					}
+				},
+				"required": [
+					"slotId",
+					"timeSeconds",
+					"secondaryTimeSeconds",
+					"isGameRunning",
+					"totalRounds",
+					"useBestOf",
+					"teams"
+				]
+			},
+			"SpectatorGamemodeTeamData": {
+				"type": "object",
+				"properties": {
+					"score": {
+						"type": "number",
+						"format": "float",
+						"default": 0
+					},
+					"roundsWon": {
+						"type": "number",
+						"format": "int32",
+						"default": 0
+					},
+					"players": {
+						"type": "array",
+						"items": {
+							"$ref": "#/components/schemas/SpectatorGamemodePlayer"
+						}
+					},
+					"teamColor": {
+						"$ref": "#/components/schemas/TeamColor"
+					}
+				},
+				"required": [
+					"score",
+					"roundsWon",
+					"players",
+					"teamColor"
+				]
+			},
+			"SpectatorGamemodePlayer": {
+				"type": "object",
+				"properties": {
+					"playerId": {
+						"type": "number",
+						"format": "int32",
+						"default": 0
+					},
+					"playerName": {
+						"type": "string"
+					},
+					"position": {
+						"$ref": "#/components/schemas/Vector"
+					}
+				},
+				"required": [
+					"playerId",
+					"playerName",
+					"position"
+				]
+			},
+			"TeamColor": {
+				"type": "object",
+				"properties": {
+					"primary": {
+						"$ref": "#/components/schemas/Color",
+						"default": {
+							"R": 97,
+							"G": 105,
+							"B": 127,
+							"A": 255
+						}
+					},
+					"secondary": {
+						"$ref": "#/components/schemas/Color",
+						"default": {
+							"R": 5,
+							"G": 5,
+							"B": 6,
+							"A": 255
+						}
+					},
+					"teamLogoIndex": {
+						"type": "number",
+						"format": "int32",
+						"default": 0
+					},
+					"teamName": {
+						"type": "string",
+						"default": "NoPreference"
+					},
+					"teamRowId": {
+						"type": "string",
+						"default": "None"
+					}
+				},
+				"required": [
+					"primary",
+					"secondary",
+					"teamLogoIndex",
+					"teamName",
+					"teamRowId"
+				]
+			},
+			"ReplayListResponse": {
+				"type": "object",
+				"properties": {
+					"replays": {
+						"type": "array",
+						"items": {
+							"type": "string"
+						}
+					}
+				},
+				"required": [
+					"replays"
+				]
+			},
+			"CameraListResponse": {
+				"type": "object",
+				"properties": {
+					"cameras": {
+						"type": "array",
+						"items": {
+							"type": "string"
+						}
+					}
+				},
+				"required": [
+					"cameras"
+				]
+			},
+			"ErrorResponseJson": {
+				"type": "object",
+				"properties": {
+					"error": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"error"
+				]
+			}
+		}
+	}
+}

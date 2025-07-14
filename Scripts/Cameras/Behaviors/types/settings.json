@@ -1,0 +1,8 @@
+{
+    "@roblox/global/Settings.getLuauReplayControlAllowed": {
+        "documentation": "Whether or not the user has allowed camera scripts to write replay files. This is read-only."
+    },
+    "@roblox/global/Settings.mutePlayerByName": {
+        "documentation": "Searches for a player by name and mutes/unmutes them if found. Returns true if the player was found."
+    }
+}

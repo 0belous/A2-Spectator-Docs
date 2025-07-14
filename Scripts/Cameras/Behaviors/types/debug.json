@@ -1,0 +1,14 @@
+{
+    "@roblox/globaltype/SpectatorDebug.goalExplosions": {
+        "documentation": "Manually trigger goal explosion effects"
+    },
+    "@roblox/globaltype/SpectatorDebug.scrapRunSpinners": {
+        "documentation": "If the scrap run spinners should spin"
+    },
+    "@roblox/globaltype/SpectatorDebug.placeBallHereVisuals": {
+        "documentation": "Enable or disable the ball place visual"
+    },
+    "@roblox/globaltype/SpectatorDebug.replayBallScaleMultiplier": {
+        "documentation": "Multiplier for scale of all balls in the replay"
+    }
+}

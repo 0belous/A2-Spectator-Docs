@@ -1,0 +1,168 @@
+{
+    "@roblox/globaltype/SpectatorCamera": {
+        "documentation": "This class represents this script's camera in game."
+    },
+    "@roblox/globaltype/SpectatorCamera.position": {
+        "documentation": "The current position of the camera (before smoothing). Setting this will change the position of this camera in game."
+    },
+    "@roblox/globaltype/SpectatorCamera.rotation": {
+        "documentation": "The current rotation of the camera (before smoothing). Setting this will change the rotation of this camera in game."
+    },
+    "@roblox/globaltype/SpectatorCamera.fieldOfView": {
+        "documentation": "The current vertical field of view of the camera in degrees (before smoothing). Setting this will change the field of view of this camera in game."
+    },
+    "@roblox/globaltype/SpectatorCamera.isActive": {
+        "documentation": "Whether this camera is set as the active camera. There can only be one active camera at a time."
+    },
+    "@roblox/globaltype/SpectatorCamera.isFollowed": {
+        "documentation": "This is true when another camera script is following this camera. Usually you want to enable your camera script inputs when this is true."
+    },
+    "@roblox/globaltype/SpectatorCamera.positionSmoothing": {
+        "documentation": "How much smoothing is applied to the position. This number is the time it takes for the position to reach 50% of the target value."
+    },
+    "@roblox/globaltype/SpectatorCamera.rotationSmoothing": {
+        "documentation": "How much smoothing is applied to the rotation. This number is the time it takes for the rotation to reach 50% of the target value."
+    },
+    "@roblox/globaltype/SpectatorCamera.fieldOfViewSmoothing": {
+        "documentation": "How much smoothing is applied to the field of view. This number is the time it takes for the field of view to reach 50% of the target value."
+    },
+    "@roblox/globaltype/SpectatorCamera.rotationDeadzone": {
+        "documentation": "The angular distance offset (radians) for rotation to occur"
+    },
+    "@roblox/globaltype/SpectatorCamera.showNameTags": {
+        "documentation": "If name tags are visible in game. Defaults to true"
+    },
+    "@roblox/globaltype/SpectatorCamera.nearClippingPlane": {
+        "documentation": "The near clip plane of the camera. This is the closest distance that the camera will render objects."
+    },
+    "@roblox/globaltype/SpectatorCamera.hideNearestHead": {
+        "documentation": "If the closest head to the camera should be visible"
+    },
+    "@roblox/globaltype/SpectatorCamera.getSmoothedPosition": {
+        "documentation": "Gets the actual position of the camera after smoothing is applied."
+    },
+    "@roblox/globaltype/SpectatorCamera.getSmoothedRotation": {
+        "documentation": "Gets the actual rotation of the camera after smoothing is applied."
+    },
+    "@roblox/globaltype/SpectatorCamera.getSmoothedFieldOfView": {
+        "documentation": "Gets the actual field of view of the camera after smoothing is applied."
+    },
+    "@roblox/globaltype/SpectatorCamera.lookAt": {
+        "documentation": "Rotates the camera so the forward vector points at target position."
+    },
+    "@roblox/globaltype/SpectatorCamera.lookAtBasic": {
+        "documentation": "Uses the global up vector (0, 1, 0) as the up vector."
+    },
+    "@roblox/globaltype/SpectatorCamera.followCamera": {
+        "documentation": "Once set, the camera will follow the target camera. If nil, the camera will stop following."
+    },
+    "@roblox/globaltype/SpectatorCamera.castRay": {
+        "documentation": "Performs a raycast starting at the startVector position and ending at the endVector position. Returns a RayHit object."
+    },
+    "@roblox/global/camera": {
+        "documentation": "The camera object for this script."
+    },
+    "@roblox/global/camera.declare camera": {
+        "documentation": "The camera object for this script."
+    },
+    "@roblox/globaltype/Transition": {
+        "documentation": "Transitions are used by the game when switching between cameras."
+    },
+    "@roblox/globaltype/Transition.length": {
+        "documentation": "The length of the transition in seconds."
+    },
+    "@roblox/global/getCameraById": {
+        "documentation": "Returns a reference to the camera with the given identifier, e.g. \"anotheraxiom.freecam\""
+    },
+    "@roblox/global/sendMessage": {
+        "documentation": "Sends a message to the camera with the given identifier, e.g. \"anotheraxiom.freecam\". The message can be received by the camera's `OnMessageReceived()` function."
+    },
+    "@roblox/globaltype/GravityComponent.gravity": {
+        "documentation": "The current gravity down vector in world space, scaled by the current gravity strength."
+    },
+    "@roblox/globaltype/GravityComponent.strength": {
+        "documentation": "The current gravity strength in cm/s^2."
+    },
+    "@roblox/globaltype/GravityComponent.upDirection": {
+        "documentation": "The current normalized gravity up vector in world space."
+    },
+    "@roblox/globaltype/GravityComponent.upRotation": {
+        "documentation": "A Quaternion representing the current rotation of the gravity up vector."
+    },
+    "@roblox/global/saveConfig": {
+        "documentation": "Saves the currently active camera's config to a file. Returns true if successful."
+    },
+    "@roblox/globaltype/PostProcessSettings.bloomIntensity": {
+        "documentation": "Multiplier for all bloom contributions >=0: off, 1(default), >1 brighter"
+    },
+    "@roblox/globaltype/PostProcessSettings.bloomThreshold": {
+        "documentation": "Minimum brightness the bloom starts having effect. 1:all pixels affect bloom equally (physically correct, faster as a threshold pass is omitted), 0:all pixels affect bloom brights more, 1(default), >1 brighter"
+    },
+    "@roblox/globaltype/PostProcessSettings.depthOfFieldFstop": {
+        "documentation": "Defines the opening of the camera lens, Aperture is 1/ fstop, typical lens go down to f/ 1.2 (large opening), larger numbers reduce the DOF effect"
+    },
+    "@roblox/globaltype/PostProcessSettings.depthOfFieldFocalDistance": {
+        "documentation": "Distance in which the Depth of Field effect should be sharp, in unreal units (cm)"
+    },
+    "@roblox/globaltype/PostProcessSettings.depthOfFieldSensorWidth": {
+        "documentation": "Width of the camera sensor to assume, in mm."
+    },
+    "@roblox/globaltype/PostProcessSettings.chromaticAberrationIntensity": {
+        "documentation": "In percent, Scene chromatic aberration / color fringe (camera imperfection) to simulate an artifact that happens in real-world lens, mostly visible in the image corners."
+    },
+    "@roblox/globaltype/PostProcessSettings.motionBlurAmount": {
+        "documentation": "Strength of motion blur, 0:off"
+    },
+    "@roblox/globaltype/PostProcessSettings.vignetteIntensity": {
+        "documentation": "0..1 0=off/ no vignette .. 1=strong vignette"
+    },
+    "@roblox/globaltype/PostProcessSettings.autoExposureBias": {
+        "documentation": "Logarithmic adjustment for the exposure. Only used if a tonemapper is specified. 0: no adjustment, -1:2x darker, -2:4x darker, 1:2x brighter, 2:4x brighter, ..."
+    },
+    "@roblox/globaltype/PostProcessSettings.reset": {
+        "documentation": "Reset post processing to its initial state"
+    },
+    "@roblox/global/postProcessSettings": {
+        "documentation": "The post processing settings for this camera"
+    },
+    "@roblox/global/postProcessSettings.declare postProcessSettings": {
+        "documentation": "The post processing settings for this camera"
+    },
+    "@roblox/global/alwaysTick": {
+        "documentation": "If this is set to true, the camera will always call the tick function, even if it's not active or being followed. The default behavior is to only tick when active or followed."
+    },
+    "@roblox/global/alwaysTick.declare alwaysTick": {
+        "documentation": "If this is set to true, the camera will always call the tick function, even if it's not active or being followed. The default behavior is to only tick when active or followed."
+    },
+    "@roblox/globaltype/Screenshot": {
+        "documentation": "Screenshot",
+        "keys": {
+            "takeScreenshot": "@roblox/globaltype/Screenshot.takeScreenshot"
+        }
+    },
+    "@roblox/global/Screenshot": {
+        "documentation": "Screenshot",
+        "keys": {
+            "takeScreenshot": "@roblox/global/Screenshot.takeScreenshot"
+        }
+    },
+    "@roblox/global/Screenshot.takeScreenshot": {
+        "documentation": "Takes a high-res screenshot at a given resolution. Screenshots are saved to Documents/Another-Axiom/A2/Screenshots",
+        "params": [
+            {
+                "name": "Width",
+                "documentation": "@roblox/global/Screenshot.takeScreenshot/param/0"
+            },
+            {
+                "name": "Height",
+                "documentation": "@roblox/global/Screenshot.takeScreenshot/param/1"
+            }
+        ]
+    },
+    "@roblox/global/Screenshot.takeScreenshot/param/0": {
+        "documentation": "Width of the screenshot in pixels"
+    },
+    "@roblox/global/Screenshot.takeScreenshot/param/1": {
+        "documentation": "Height of the screenshot in pixels"
+    }
+}

@@ -1,0 +1,74 @@
+{
+    "@roblox/global/Gui.text": {
+        "documentation": "Display text"
+    },
+    "@roblox/global/Gui.separatorText": {
+        "documentation": "Formatted text with an horizontal line"
+    },
+    "@roblox/global/Gui.sameLine": {
+        "documentation": "Call between widgets or groups to layout them horizontally. X position given in window coordinates."
+    },
+    "@roblox/global/Gui.vSliderFloat": {
+        "documentation": "Like sliderFloat but with a vertical bar"
+    },
+    "@roblox/global/Gui.vSliderInt": {
+        "documentation": "Like sliderInt but with a vertical bar"
+    },
+    "@roblox/global/Gui.smallButton": {
+        "documentation": "Button with (FramePadding.y == 0) to easily embed within text"
+    },
+    "@roblox/global/Gui.collapsingHeader": {
+        "documentation": "If returning 'true' the header is open. Doesn't indent nor push on ID stack. User doesn't have to call TreePop()."
+    },
+    "@roblox/global/Gui.treeNode": {
+        "documentation": "TreeNode functions return true when the node is open, in which case you need to also call TreePop() when you are finished displaying the tree node contents."
+    },
+    "@roblox/global/Gui.indent": {
+        "documentation": "Move content position toward the right, by indent_w, or style.IndentSpacing if indent_w <= 0"
+    },
+    "@roblox/global/Gui.unindent": {
+        "documentation": "Move content position back to the left, by indent_w, or style.IndentSpacing if indent_w <= 0"
+    },
+    "@roblox/global/Gui.beginDisabled": {
+        "documentation": "Disabled elements have reduced alpha and don't react to user input. A disabled element won't have its callback function called."
+    },
+    "@roblox/global/Gui.pushId": {
+        "documentation": "Push string into the ID stack (will hash string). For more info, check out https://github.com/ocornut/imgui/blob/master/docs/FAQ.md#q-about-the-id-stack-system"
+    },
+    "@roblox/global/Gui.popId": {
+        "documentation": "Pop from the ID stack."
+    },
+    "@roblox/global/Gui.separator": {
+        "documentation": "Separator, generally horizontal. Inside a menu bar or in horizontal layout mode, this becomes a vertical separator."
+    },
+    "@roblox/global/Gui.newLine": {
+        "documentation": "Undo a sameLine() or force a new line when in a horizontal-layout context."
+    },
+    "@roblox/global/Gui.isItemHovered": {
+        "documentation": "Is the last item hovered? (and usable, aka not blocked by a popup, etc.). See ImGuiHoveredFlags for more options."
+    },
+    "@roblox/global/Gui.beginTooltip": {
+        "documentation": "Begin/append a tooltip window."
+    },
+    "@roblox/global/Gui.endTooltip": {
+        "documentation": "Only call EndTooltip() if BeginTooltip()/BeginItemTooltip() returns true!"
+    },
+    "@roblox/global/Gui.setItemTooltip": {
+        "documentation": "Creates a tooltip with the given text for the last element"
+    },
+    "@roblox/global/Gui.isItemActivated": {
+        "documentation": "Was the last item just made active (item was previously inactive)."
+    },
+    "@roblox/global/Gui.isItemDeactivated": {
+        "documentation": "Was the last item just made inactive (item was previously active)."
+    },
+    "@roblox/global/Gui.timeline": {
+        "documentation": "A float slider with time labels and custom stand and end times"
+    },
+    "@roblox/global/Gui.keyframeRow": {
+        "documentation": "A horizontal row with points that hold a position and value"
+    },
+    "@roblox/global/Gui.graphEditor": {
+        "documentation": "A bezier spline editor"
+    }
+}

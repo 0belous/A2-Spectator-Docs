@@ -1,0 +1,11 @@
+{
+    "@roblox/global/World.drawLine": {
+        "documentation": "Draws a line in space, color values are from 0-1, lifetime of 0 means it will not be cleared"
+    },
+    "@roblox/global/World.drawPoint": {
+        "documentation": "Draws a point in space, color values are from 0-1, lifetime of 0 means it will not be cleared"
+    },
+    "@roblox/global/World.clear": {
+        "documentation": "Clears all existing lines and points"
+    }
+}
