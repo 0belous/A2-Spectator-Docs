@@ -1,14 +1,4 @@
 --!strict
--- @name Station Camera
--- @description Static cameras throughout the station
--- @author Another Axiom
-
-metadata = {
-	name = "Station Camera",
-	description = "Static cameras throughout the station",
-	author = "Another Axiom",
-	defaultKeybind = "",
-}
 
 -- This is a helper function to initialize the config with default values
 local function initializeConfig(defaultConfig: {
@@ -53,12 +43,7 @@ function main()
 			{
 				name = "Arena Window",
 				position = Vec3.new(3904.242484555357, 7281.041352496758, -29224.007999180325),
-				rotation = Quat.new(
-					-0.010468011182851143,
-					0.0034439552565942036,
-					0.948135781433171,
-					0.3176745187769652
-				),
+				rotation = Quat.new(-0.010468011182851143, 0.0034439552565942036, 0.948135781433171, 0.3176745187769652),
 				fieldOfView = 65,
 				district = "Driftball",
 			},
@@ -100,12 +85,7 @@ function main()
 			{
 				name = "Scraprun 5",
 				position = Vec3.new(-29977.33906539682, 26931.70186354928, -1790.752062638552),
-				rotation = Quat.new(
-					-0.6722298215893858,
-					0.0017076067299041271,
-					-0.7403373977606847,
-					0.002165299539759382
-				),
+				rotation = Quat.new(-0.6722298215893858, 0.0017076067299041271, -0.7403373977606847, 0.002165299539759382),
 				fieldOfView = 95.0000228881836,
 				district = "Scraprun",
 			},
@@ -210,36 +190,21 @@ function main()
 			{
 				name = "Driftplex Entrance",
 				position = Vec3.new(6251.780197687672, 18410.752687025084, -28374.25842418776),
-				rotation = Quat.new(
-					0.001565008797139448,
-					-0.15489342058230665,
-					0.010609863020328004,
-					0.9878729725093544
-				),
+				rotation = Quat.new(0.001565008797139448, -0.15489342058230665, 0.010609863020328004, 0.9878729725093544),
 				fieldOfView = 114.9999771118164,
 				district = "Driftball",
 			},
 			{
 				name = "Crane",
 				position = Vec3.new(5873.181090344515, 24085.708266127513, -27073.02222661239),
-				rotation = Quat.new(
-					-0.02124234968477417,
-					0.010029970792308975,
-					0.9026349594822676,
-					0.42976539202944286
-				),
+				rotation = Quat.new(-0.02124234968477417, 0.010029970792308975, 0.9026349594822676, 0.42976539202944286),
 				fieldOfView = 114.99996948242188,
 				district = "Driftball",
 			},
 			{
 				name = "Window to Entrance",
 				position = Vec3.new(6731.400221382023, 22984.461357911372, -27551.63590111842),
-				rotation = Quat.new(
-					0.007977315037192876,
-					0.0028831899178311388,
-					-0.8259274034660367,
-					0.5637126695973275
-				),
+				rotation = Quat.new(0.007977315037192876, 0.0028831899178311388, -0.8259274034660367, 0.5637126695973275),
 				fieldOfView = 59.9999885559082,
 				district = "Driftball",
 			},
@@ -260,12 +225,7 @@ function main()
 			{
 				name = "Driftball Entrance",
 				position = Vec3.new(-1691.469109205072, 9770.56288042978, -27722.82155380309),
-				rotation = Quat.new(
-					0.016634520741928647,
-					0.021325503841351248,
-					-0.6176455112433725,
-					0.7859914363697051
-				),
+				rotation = Quat.new(0.016634520741928647, 0.021325503841351248, -0.6176455112433725, 0.7859914363697051),
 				fieldOfView = 35.00001525878906,
 				district = "Driftball",
 			},
@@ -349,8 +309,7 @@ function onGui()
 	else
 		config.autoSwitch = Gui.checkbox("Cycle cameras", config.autoSwitch)
 		if config.autoSwitch then
-			config.autoSwitchDelay =
-				Gui.dragFloat("Auto Switch Delay (seconds)", config.autoSwitchDelay, 0.5, 0.1, 6000)
+			config.autoSwitchDelay = Gui.dragFloat("Auto Switch Delay (seconds)", config.autoSwitchDelay, 0.5, 0.1, 6000)
 			Gui.beginDisabled()
 			Gui.sliderFloat("", os.clock() - lastSwitchTime, 0, config.autoSwitchDelay)
 			Gui.endDisabled()

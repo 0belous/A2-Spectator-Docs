@@ -268,3 +268,25 @@ declare DateTime: {
 --- The config table from the configuation .json file
 declare config: any
 
+
+-- A simple LinearColor type which holds 4 Numbers
+declare class LinearColor
+	-- The X Component of the LinearColor
+	R: number
+	-- The Y Component of the LinearColor
+	G: number
+	-- The Z Component of the LinearColor
+	B: number
+	-- The A Component of the LinearColor
+	A: number
+	function __tostring (self): string
+	function __mul (self, Rhs: LinearColor): LinearColor
+end
+
+declare class LinearColor_Class
+	White: LinearColor
+	new:
+		((R: number, G: number, B: number, A: number) -> LinearColor) &
+		({R: number?, G: number?, B: number?, A: number?}) -> LinearColor
+end
+declare LinearColor: LinearColor_Class

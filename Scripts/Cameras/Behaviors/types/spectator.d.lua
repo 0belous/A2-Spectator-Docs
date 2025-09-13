@@ -51,8 +51,10 @@ declare class SpectatorCamera
 	function getClosestGamemodeSlot(self): GamemodeSlot
 	--- Shows or hides quest items and progress for the player(s) with the given player id.
 	function showQuestsForPlayerById(self, playerId: number, showQuests: boolean): boolean
-		--- Shows or hides quest items and progress for the player(s) with the given player name.
+	--- Shows or hides quest items and progress for the player(s) with the given player name.
 	function showQuestsForPlayerByName(self, playerName: string, showQuests: boolean): boolean
+	--- Shows the requested emote by index on the spectator model. 0 clears the emote.
+	function setEmote(self, emoteIndex: number): ()
 end
 
 --- The camera object for this script.
@@ -163,18 +165,25 @@ declare SpectatorGameTimeComponent: SpectatorGameTimeComponent_Class
 
 -- Module State Spectator Lua Api
 declare class ModuleStateSpectatorLuaApi
+	transform: Transform
 	-- Gets the current score for the specified team
-	function getTeamScore (self, TeamIndex: number): number
+	function getTeamScore (self, teamIndex: number): number
 	-- Gets the number of round wins for the specified team
-	function getTeamRoundsWon (self, TeamIndex: number): number
+	function getTeamRoundsWon (self, teamIndex: number): number
 	-- Get Team Colors Array
 	function getTeamColorsArray (self): { TeamColor }
+	-- Get String Config Variable
+	function getStringConfigVariable (self, variableName: string): string
 	-- Get Slot Id
 	function getSlotId (self): string
+	-- Get Number Config Variable
+	function getNumberConfigVariable (self, variableName: string): number
 	-- Get Is Game Running
 	function getIsGameRunning (self): boolean
 	-- Returns an object that contains game time information
 	function getGameTimeComponent (self): SpectatorGameTimeComponent
+	-- Get Bool Config Variable
+	function getBoolConfigVariable (self, variableName: string): boolean
 end
 
 declare class ModuleStateSpectatorLuaApi_Class
@@ -240,3 +249,19 @@ end
 declare Network: Network_Class
 
 
+declare class SpectatorEmote extends EnumItem end
+declare class EnumSpectatorEmote_INTERNAL extends Enum
+	None: SpectatorEmote
+	Affirmative: SpectatorEmote
+	Negative: SpectatorEmote
+	Left: SpectatorEmote
+	Right: SpectatorEmote
+	Up: SpectatorEmote
+	Down: SpectatorEmote
+	FollowMe: SpectatorEmote
+	Wave: SpectatorEmote
+	XX: SpectatorEmote
+	Wink: SpectatorEmote
+	Suspicious: SpectatorEmote
+	ESpectatorEmote_MAX: SpectatorEmote
+end

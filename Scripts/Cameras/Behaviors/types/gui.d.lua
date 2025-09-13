@@ -78,7 +78,7 @@ declare Gui: {
     tableNextColumn:()->boolean,
     tableSetupColumn:(id: string)->(),
     tableHeadersRow:()->(),
-    rangeSlider:(id:string, selectedRange: Vec2, min: number, max: number)->Vec2,
+    rangeSlider:(id:string, selectedRange: Vec2, min: number, max: number, clamp: boolean)->Vec2,
     --- A float slider with time labels and custom stand and end times
     timeline:(id:string, playbackTime: number, startTime:number, endTime: number, snapTimeInterval: number)->number,
     --- A horizontal row with points that hold a position and value

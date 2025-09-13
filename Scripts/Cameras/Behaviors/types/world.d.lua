@@ -4,7 +4,7 @@ declare WorldDraw: {
     --- Draws a point in space, color values are from 0-1, lifetime of 0 means it will not be cleared
     drawPoint: (position: Vec3, r: number, g: number, b: number, pointSize: number, lifetime: number)-> (),
     --- Draws a triangle in space, color values are from 0-1, lifetime of 0 means it will not be cleared. This triangle is one-sided, so the order of the points matters.
-    drawTriangle: (point1: Vec3, point2: Vec3, point3: Vec3, color: Vec3, lifetime: number)-> (),
+    drawTriangle: (point1: Vec3, point2: Vec3, point3: Vec3, color: LinearColor, lifetime: number)-> (),
     --- Clears all existing lines and points
     clear:()-> (),
     --- Clears all existing lines, points, and lights

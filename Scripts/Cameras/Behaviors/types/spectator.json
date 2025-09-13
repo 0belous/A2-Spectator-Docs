@@ -133,36 +133,5 @@
     },
     "@roblox/global/alwaysTick.declare alwaysTick": {
         "documentation": "If this is set to true, the camera will always call the tick function, even if it's not active or being followed. The default behavior is to only tick when active or followed."
-    },
-    "@roblox/globaltype/Screenshot": {
-        "documentation": "Screenshot",
-        "keys": {
-            "takeScreenshot": "@roblox/globaltype/Screenshot.takeScreenshot"
-        }
-    },
-    "@roblox/global/Screenshot": {
-        "documentation": "Screenshot",
-        "keys": {
-            "takeScreenshot": "@roblox/global/Screenshot.takeScreenshot"
-        }
-    },
-    "@roblox/global/Screenshot.takeScreenshot": {
-        "documentation": "Takes a high-res screenshot at a given resolution. Screenshots are saved to Documents/Another-Axiom/A2/Screenshots",
-        "params": [
-            {
-                "name": "Width",
-                "documentation": "@roblox/global/Screenshot.takeScreenshot/param/0"
-            },
-            {
-                "name": "Height",
-                "documentation": "@roblox/global/Screenshot.takeScreenshot/param/1"
-            }
-        ]
-    },
-    "@roblox/global/Screenshot.takeScreenshot/param/0": {
-        "documentation": "Width of the screenshot in pixels"
-    },
-    "@roblox/global/Screenshot.takeScreenshot/param/1": {
-        "documentation": "Height of the screenshot in pixels"
     }
 }

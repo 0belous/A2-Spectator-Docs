@@ -1,0 +1,13 @@
+{
+    "name": "anotheraxiom.emotes_example",
+    "displayName": "Emotes Example",
+    "version": "0.0.1",
+    "description": "Slowly cycles through the available emotes",
+    "main": "main.luau",
+    "keywords": [
+        "example",
+        "testing"
+    ],
+    "author": "Another Axiom",
+    "defaultKeybind": ""
+}

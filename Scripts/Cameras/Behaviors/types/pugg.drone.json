@@ -1,0 +1,16 @@
+{
+	"script": "pugg.drone.luau",
+	"customData":
+	{
+		"bumperSense": 80,
+		"keyboardRotateSense": 119.94899749755859,
+		"drag": 0.99000000953674316,
+		"smoothing": 0.20000000298023224,
+		"throttle": 20.242000579833984,
+		"maxSpeed": 1700.9310302734375,
+		"mouseSense": 250,
+		"stickSense": 50.991001129150391,
+		"fov": 100,
+		"gravityStrengthMultiplier": 1672.324951171875
+	}
+}

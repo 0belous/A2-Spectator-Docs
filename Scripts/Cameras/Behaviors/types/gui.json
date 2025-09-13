@@ -70,5 +70,11 @@
     },
     "@roblox/global/Gui.graphEditor": {
         "documentation": "A bezier spline editor"
+    },
+    "@roblox/global/Gui.keyframeRowIsDragging": {
+        "documentation": "Check if a keyframe in a keyframeRow is being dragged by passing in the id of the keyframeRow"
+    },
+    "@roblox/global/Gui.keyframeRowSelectedKeyframes": {
+        "documentation": "Get a list of the indices of all selected points"
     }
 }

@@ -167,7 +167,7 @@ function onGui()
 		Gui.text("Replay range: ")
 		Gui.text(`Start: {range.x}`)
 		Gui.text(`End: {range.y}`)
-		local nextRange = Gui.rangeSlider("timelineRange", range, 0, replay:getDurationSeconds())
+		local nextRange = Gui.rangeSlider("timelineRange", range, 0, replay:getDurationSeconds(), true)
 		if nextRange.x ~= range.x then
 			replay:setPlaybackTimeSeconds(nextRange.x)
 		end

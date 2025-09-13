@@ -1,0 +1,14 @@
+{
+    "name": "anotheraxiom.freecam",
+    "displayName": "Free Camera",
+    "version": "0.0.1",
+    "description": "A floating camera that can be manually controlled with keyboard and gamepad.",
+    "main": "main.luau",
+    "keywords": [
+        "freecam",
+        "controller",
+        "keyboard"
+    ],
+    "author": "Another Axiom",
+    "defaultKeybind": "X"
+}

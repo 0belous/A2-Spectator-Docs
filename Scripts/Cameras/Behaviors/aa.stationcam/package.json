@@ -1,0 +1,13 @@
+{
+    "name": "anotheraxiom.stationcam",
+    "displayName": "Station Camera",
+    "version": "0.0.1",
+    "description": "Static cameras throughout the station",
+    "main": "main.luau",
+    "keywords": [
+        "cinematic",
+        "keyboard"
+    ],
+    "author": "Another Axiom",
+    "defaultKeybind": ""
+}

@@ -57,7 +57,8 @@ function tick(dt)
 	local rotEuler = Vec3.zeroVector
 	local spinMultiplier = 1.8
 	rotEuler.x = Input.getAnalog(Input.Gamepad.RightX) * rotSpeed * spinMultiplier * dt
-	rotEuler.y = -Input.getAnalog(Input.Gamepad.RightY) * rotSpeed * spinMultiplier * dt
+	-- The line below was changed
+	rotEuler.y = Input.getAnalog(Input.Gamepad.RightY) * rotSpeed * spinMultiplier * dt
 	rotEuler.z = Input.getAnalog(Input.Gamepad.LeftX) * rotSpeed * spinMultiplier * dt
 
 	rot_euler = (droneRotation * Quat.fromEuler(rotEuler.x, rotEuler.y, rotEuler.z)):euler()

@@ -214,7 +214,7 @@ function onGui()
 		end
 		Gui.tableNextColumn()
 		Gui.tableNextColumn()
-		local range = Gui.rangeSlider("timelineRange", Vec2.new(rangeStartTime, rangeEndTime), timelineStart, timelineEnd)
+		local range = Gui.rangeSlider("timelineRange", Vec2.new(rangeStartTime, rangeEndTime), timelineStart, timelineEnd, true)
 		rangeStartTime = range.x
 		rangeEndTime = range.y
 		playbackTime = Gui.timeline("timeline", playbackTime, roundUp(rangeStartTime, snapTimeInterval), rangeEndTime, snapTimeInterval)
