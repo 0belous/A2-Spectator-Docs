@@ -1,6 +1,6 @@
 # Orion Drift Spectator
 
-# https://0belous.github.io/A2-Spectator-Docs/
+# https://docs.spectator.oriondriftvr.com/
 
 # https://dl.obelous.dev/public/A2-archive/
 
